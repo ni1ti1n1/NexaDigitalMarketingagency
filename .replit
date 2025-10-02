@@ -23,7 +23,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python -m http.server 5000 --bind 0.0.0.0"
+args = "npm start"
 waitForPort = 5000
 
 [workflows.workflow.metadata]
@@ -34,9 +34,9 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 35783
+localPort = 35057
 externalPort = 3000
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["python", "-m", "http.server", "5000", "--bind", "0.0.0.0"]
+run = ["npm", "start"]

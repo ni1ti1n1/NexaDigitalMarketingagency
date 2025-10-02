@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -117,43 +117,36 @@
                 <p>Comprehensive digital marketing solutions tailored to elevate your brand and drive measurable results</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <span class="service-icon">🔍</span>
-                    <h3>SEO Optimization</h3>
-                    <p>Boost your search engine rankings and drive organic traffic with our expert SEO strategies and technical optimization.</p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <span class="service-icon">📱</span>
-                    <h3>Social Media Marketing</h3>
-                    <p>Engage your audience and build your brand on platforms like Facebook, Instagram, LinkedIn, and more.</p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <span class="service-icon">💰</span>
-                    <h3>Paid Advertising</h3>
-                    <p>Maximize ROI with data-driven paid advertising campaigns on Google, Facebook, Instagram, and other platforms.</p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <span class="service-icon">✍️</span>
-                    <h3>Content Strategy</h3>
-                    <p>Create valuable, relevant content that attracts and retains your ideal customers through storytelling.</p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <span class="service-icon">📧</span>
-                    <h3>Email Marketing</h3>
-                    <p>Nurture leads and drive sales with personalized email campaigns, automation, and segmentation.</p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <span class="service-icon">📈</span>
-                    <h3>Analytics & Reporting</h3>
-                    <p>Track performance, measure success, and make data-driven decisions with comprehensive analytics.</p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
+            <!-- Add Service Form -->
+            <div class="add-service-wrapper">
+                <button id="toggleFormBtn" class="toggle-form-btn">➕ Add New Service</button>
+                <form id="addServiceForm" class="add-service-form" style="display: none;">
+                    <h3>Add New Service</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="serviceName">Service Name *</label>
+                            <input type="text" id="serviceName" name="serviceName" required placeholder="e.g., SEO Optimization">
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceIcon">Icon (emoji) *</label>
+                            <input type="text" id="serviceIcon" name="serviceIcon" required placeholder="e.g., 🔍" maxlength="2">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceDesc">Description *</label>
+                        <textarea id="serviceDesc" name="serviceDesc" required placeholder="Brief description of the service..."></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-service-btn">Add Service</button>
+                        <button type="button" id="cancelFormBtn" class="cancel-btn">Cancel</button>
+                    </div>
+                </form>
+                <div id="serviceMessage" class="service-message"></div>
+            </div>
+
+            <!-- Services Grid (populated dynamically) -->
+            <div id="servicesGrid" class="services-grid">
+                <div class="loading-message">Loading services...</div>
             </div>
         </div>
     </section>
@@ -485,6 +478,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+{
+  "name": "nexa-digital-marketing",
+  "version": "1.0.0",
+  "description": "Full-stack digital marketing agency website with Express.js backend and dynamic service management",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["express", "digital-marketing", "full-stack"],
+  "author": "NEXA",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
